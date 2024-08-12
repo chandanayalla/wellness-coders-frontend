@@ -1,4 +1,3 @@
-// src/components/HydrationCalculator.js
 import React, { useState } from 'react';
 import { Box, FormControl, FormLabel, Input, Button, VStack, Heading } from '@chakra-ui/react';
 

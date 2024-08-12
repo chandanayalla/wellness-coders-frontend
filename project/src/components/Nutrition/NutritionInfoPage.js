@@ -18,7 +18,7 @@ const NutritionInfoPage = () => {
   };
 
   const handleAddMealsClick = () => {
-    navigate('/add-meals');
+    navigate('/addmeal');
   };
 
   return (

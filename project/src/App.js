@@ -12,6 +12,8 @@ import CalorieCalculator from './components/calculator/CalorieCalculator';
 import HydrationCalculator from './components/calculator/HydrationCalculator';
 import MacronutrientCalculator from './components/calculator/MacronutrientCalculator';
 import NutritionInfoPage from './components/Nutrition/NutritionInfoPage';
+import HomePage from './components/addmeal/MealPlanningApp.js';
+import ResultPage from './components/result/result.js';
 //import Navbar from './'
 
 
@@ -34,6 +36,8 @@ function App() {
         <Route path="/nutrition" element={<NutritionInfoPage/>}/>
         {/* <Route path="/about" element={<Menu/>}/> */}
         <Route path="/forgotpass" element={<ForgotPassword />} />
+        <Route path="/addmeal" element={<HomePage/>}/>
+        <Route path="/result" element={<ResultPage/>}/>
 
 
 </Routes>
