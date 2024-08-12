@@ -14,6 +14,7 @@ import {
   import { useState } from "react";
   import axios from 'axios';
   import { api } from "../axios/api";
+import { ForgotPassword } from "../forgotpassword/forgotpassword";
   
   export const SignIn = () => {
     const [email, setEmail] = useState("");
@@ -97,6 +98,10 @@ import {
               >
                 SignIn
               </Button>
+              <Text textAlign="center" color="gray.500" onClick={ForgotPassword} cursor="pointer">
+          Forgot password?
+        </Text>
+        
             </VStack>
           </CardBody>
         </Card>

@@ -62,7 +62,7 @@ const About= () => {
           <Text fontSize="md" mb={6}>
             We believe in a holistic approach to wellness, integrating both physical and mental health practices. Our team of experts is here to provide you with accurate and reliable information to help you lead a healthier and more balanced life.
           </Text>
-          <Button
+          {/* <Button
             size="lg"
             colorScheme="teal"
             variant="solid"
@@ -71,7 +71,7 @@ const About= () => {
             onClick={handleBackClick}
           >
            Home
-          </Button>
+          </Button> */}
         </Flex>
       </Box>
       <Box

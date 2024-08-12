@@ -6,6 +6,7 @@ import Home from './components/home/home';
 import Home1 from './components/home/home1';
 import About from './components/about/about';
 import SignOut from './components/signout/signout';
+import { ForgotPassword } from './components/forgotpassword/forgotpassword';
 //import Navbar from './'
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/signout" element={<SignOut/>}/>
         {/* <Route path="/about" element={<Menu/>}/> */}
+        <Route path="/forgotpass" element={<ForgotPassword />} />
 
 
 </Routes>

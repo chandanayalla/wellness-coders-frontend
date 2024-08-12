@@ -60,10 +60,12 @@ export const SignUp = () => {
         left: 0,
         width: '100%',
         height: '100%',
+       backgroundImage: "url('https://www.cleantechloops.com/wp-content/uploads/2022/10/sports-nutrition-852x540.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: 0.3,
         zIndex: -1
+       
       }}
     >
       <Heading as="h2" size="xl" textAlign="center" color="teal.600" mb={6}>
@@ -133,9 +135,9 @@ export const SignUp = () => {
             Sign In
           </Link>
         </Text>
-        {/* <Text textAlign="center" color="gray.500" onClick={ForgotPassword} cursor="pointer">
+        <Text textAlign="center" color="gray.500" onClick={ForgotPassword} cursor="pointer">
           Forgot password?
-        </Text> */}
+        </Text>
       </Stack>
     </Box>
   );
