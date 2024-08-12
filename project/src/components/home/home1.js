@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Link, Image, Heading, Text, Button, useBreakpointValue, useMediaQuery, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const Home1 = () => {
   const navigate = useNavigate();
   const [isMobile] = useMediaQuery("(max-width: 48em)");
   const displayMenu = useBreakpointValue({ base: 'none', md: 'flex' });
@@ -11,16 +11,12 @@ const Home = () => {
     navigate('/get-started');
   };
 
-  const handleSignInClick = () => {
-    navigate('/signin');
-  };
-
-  const handleSignUpClick = () => {
-    navigate('/signup');
-  };
+//   const handleSignInClick = () => {
+//     navigate('/signin');
+//   };
 
   const handleSignOutClick = () => {
-    navigate('/signin');
+    navigate('/');
   };
 
   return (
@@ -69,7 +65,7 @@ const Home = () => {
             </Box>
           </Flex>
 
-          {/* Profile Menu and Sign In/Sign Up Buttons */}
+          {/* Profile Menu and Sign In Button */}
           <Flex align="center">
             {/* Sign In Button */}
             <Button
@@ -77,22 +73,10 @@ const Home = () => {
               colorScheme="teal"
               size="sm"
               borderRadius="full"
-              onClick={handleSignInClick}
+              onClick={handleSignOutClick}
               ml={4}
             >
-              Sign In
-            </Button>
-
-            {/* Sign Up Button */}
-            <Button
-              variant="solid"
-              colorScheme="teal"
-              size="sm"
-              borderRadius="full"
-              onClick={handleSignUpClick}
-              ml={4}
-            >
-              Sign Up
+              Sign Out
             </Button>
 
             {/* Mobile Menu Button */}
@@ -104,17 +88,17 @@ const Home = () => {
               </Box>
             )}
 
-            {/* Profile Menu (Commented Out for Now) */}
+            {/* Profile Menu */}
             <Box ml={4}>
-              {/* <Menu>
+              <Menu>
                 <MenuButton as={Button} colorScheme="teal" size="sm" borderRadius="full">
                   Profile
                 </MenuButton>
-                <MenuList>
+                {/* <MenuList>
                   <MenuItem onClick={handleSignInClick}>Sign In</MenuItem>
                   <MenuItem onClick={handleSignOutClick}>Sign Out</MenuItem>
-                </MenuList>
-              </Menu> */}
+                </MenuList> */}
+              </Menu>
             </Box>
           </Flex>
         </Flex>
@@ -144,9 +128,9 @@ const Home = () => {
             Welcome to Our Website
           </Heading>
           <Text fontSize="lg" mb={6} textShadow="1px 1px 3px rgba(0, 0, 0, 0.5)">
-            We are delighted to have you here! Explore our site to learn more about sports nutrition and meal planning.
+            We are delighted to have you here! Explore our site to learn more about us.
           </Text>
-          {/* <Button
+          <Button
             onClick={handleGetStartedClick}
             size="lg"
             colorScheme="teal"
@@ -155,11 +139,11 @@ const Home = () => {
             borderRadius="full"
           >
             Get Started
-          </Button> */}
+          </Button>
         </Flex>
       </Box>
 
-    
+      {/* Footer */}
       <Box
         as="footer"
         bg="white"
@@ -203,4 +187,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home1;

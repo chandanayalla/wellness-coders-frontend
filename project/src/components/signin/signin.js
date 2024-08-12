@@ -25,6 +25,8 @@ import {
           if (res.data.message) {
             console.log(res?.data?.values);
             alert(res.data.message);
+            window.location.href = "/home1";
+
           } else {
             alert(res.data.error);
             window.location.href = "/signup";
@@ -39,7 +41,7 @@ import {
         display="flex" 
         justifyContent="center" 
         alignItems="center" 
-        //bgGradient="linear(to-r, teal.500, green.500)"
+        bgGradient="linear(to-r, teal.500, green.500)"
       >
         <Card 
           width="400px" 
@@ -69,7 +71,7 @@ import {
                   placeholder="Enter your email"
                   _placeholder={{ color: 'gray.400' }}
                 />
-                {/* <FormHelperText>Enter email</FormHelperText> */}
+                <FormHelperText>Enter email</FormHelperText>
               </FormControl>
   
               <FormControl id="password" isRequired>
@@ -81,7 +83,7 @@ import {
                   placeholder="Enter your password"
                   _placeholder={{ color: 'gray.400' }}
                 />
-                {/* <FormHelperText>Enter your password</FormHelperText> */}
+                <FormHelperText>Enter your password</FormHelperText>
               </FormControl>
   
               <Button 
