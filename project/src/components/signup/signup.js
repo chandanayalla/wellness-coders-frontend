@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useState } from "react";
 import axios from 'axios';
 import { api } from "../axios/api";
 import {
   Input,
   FormControl,
   FormLabel,
-  FormHelperText,
   Box,
   Stack,
   Button,
@@ -17,28 +15,26 @@ import {
 } from '@chakra-ui/react';
 
 export const SignUp = () => {
-  const nav = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [name, setName] = useState("");
 
   const signup = async () => {
-    await axios.post(api + "/signup", { email, name, mobile, password })
-      .then((res) => {
-        if (res.data.message) {
-          console.log(res?.data?.values);
-          alert(res.data.message);
-        } else {
-          alert(res.data.error);
-          window.location.href = "/home";
-        }
-      })
-      .catch((e) => console.log(e));
-  };
-
-  const ForgotPassword = () => {
-    nav('/forgotpassword');
+    try {
+      const response = await axios.post(api + "/signup", { email, name, mobile, password });
+      if (response.data.message) {
+        console.log(response?.data?.values);
+        alert(response.data.message);
+        // Redirect to home page on successful signup
+        navigate('/home1');
+      } else {
+        alert(response.data.error);
+      }
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -60,12 +56,11 @@ export const SignUp = () => {
         left: 0,
         width: '100%',
         height: '100%',
-       backgroundImage: "url('https://www.cleantechloops.com/wp-content/uploads/2022/10/sports-nutrition-852x540.jpg')",
+        backgroundImage: "url('https://www.cleantechloops.com/wp-content/uploads/2022/10/sports-nutrition-852x540.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: 0.3,
         zIndex: -1
-       
       }}
     >
       <Heading as="h2" size="xl" textAlign="center" color="teal.600" mb={6}>
@@ -78,10 +73,9 @@ export const SignUp = () => {
             type="email"
             placeholder="Enter your email"
             onChange={(e) => setEmail(e.target.value)}
-            focusBorderColor="teal.500"
+            focusBorderColor="black"
             _placeholder={{ color: 'gray.400' }}
           />
-          <FormHelperText>We'll never share your email.</FormHelperText>
         </FormControl>
 
         <FormControl id="name" isRequired>
@@ -90,7 +84,7 @@ export const SignUp = () => {
             type="text"
             placeholder="Enter your name"
             onChange={(e) => setName(e.target.value)}
-            focusBorderColor="teal.500"
+            focusBorderColor="black"
             _placeholder={{ color: 'gray.400' }}
           />
         </FormControl>
@@ -101,7 +95,7 @@ export const SignUp = () => {
             type="tel"
             placeholder="Enter your mobile number"
             onChange={(e) => setMobile(e.target.value)}
-            focusBorderColor="teal.500"
+            focusBorderColor="black"
             _placeholder={{ color: 'gray.400' }}
           />
         </FormControl>
@@ -112,10 +106,9 @@ export const SignUp = () => {
             type="password"
             placeholder="Enter your password"
             onChange={(e) => setPassword(e.target.value)}
-            focusBorderColor="teal.500"
+            focusBorderColor="black"
             _placeholder={{ color: 'gray.400' }}
           />
-          <FormHelperText>Enter your password.</FormHelperText>
         </FormControl>
 
         <Button
@@ -135,10 +128,8 @@ export const SignUp = () => {
             Sign In
           </Link>
         </Text>
-        <Text textAlign="center" color="gray.500" onClick={ForgotPassword} cursor="pointer">
-          Forgot password?
-        </Text>
       </Stack>
     </Box>
   );
 };
+

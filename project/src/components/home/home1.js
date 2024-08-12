@@ -8,7 +8,7 @@ const Home1 = () => {
   const displayMenu = useBreakpointValue({ base: 'none', md: 'flex' });
 
   const handleGetStartedClick = () => {
-    navigate('/get-started');
+    navigate('/nutrition');
   };
 
 //   const handleSignInClick = () => {

@@ -7,6 +7,11 @@ import Home1 from './components/home/home1';
 import About from './components/about/about';
 import SignOut from './components/signout/signout';
 import { ForgotPassword } from './components/forgotpassword/forgotpassword';
+import Contact from './components/contact/contact';
+import CalorieCalculator from './components/calculator/CalorieCalculator';
+import HydrationCalculator from './components/calculator/HydrationCalculator';
+import MacronutrientCalculator from './components/calculator/MacronutrientCalculator';
+import NutritionInfoPage from './components/Nutrition/NutritionInfoPage';
 //import Navbar from './'
 
 
@@ -22,6 +27,11 @@ function App() {
         <Route path="/home1" element={<Home1 />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/signout" element={<SignOut/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/CalorieCalculator" element={<CalorieCalculator/>}/>
+        <Route path="/HydrationCalculator" element={<HydrationCalculator/>}/>
+        <Route path="/MacronutritionCalculator" element={<MacronutrientCalculator/>}/>
+        <Route path="/nutrition" element={<NutritionInfoPage/>}/>
         {/* <Route path="/about" element={<Menu/>}/> */}
         <Route path="/forgotpass" element={<ForgotPassword />} />
 

@@ -35,7 +35,7 @@ export const ForgotPassword = () => {
       alert(response.data.message);
       
       // Redirect to home page on successful password reset
-      navigate('/');
+      navigate('/signin');
     } catch (error) {
       console.error(error);
       alert("There was an error processing your request. Please try again.");
