@@ -21,20 +21,22 @@ export const SignIn = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const Signin = async () => {
-    await axios.post(api + "/signin", { email, password })
-      .then((res) => {
-        if (res.data.message) {
-          console.log(res?.data?.values);
-          // alert(res.data.message);
-          navigate("/home1"); 
+  const Signin=async()=>{
+    await axios.post(api+"/signin",{email,password})
+    .then((res)=>{
+        if(res.data.message){
+            sessionStorage.auth=JSON.stringify(res?.data?.values)
+            console.log(res?.data?.values)
+            alert(res.data.message)
+            navigate('/home1')
         } else {
-          alert(res.data.error);
-          navigate("/signup"); 
+            alert(res.data.error)
+            // window.location.href="/signup"
+            navigate('/signup')
         }
-      })
-      .catch((e) => console.log(e));
-  };
+    })
+    .catch((e)=>console.log(e))
+};
 
   const handleForgotPassword = () => {
     navigate('/forgotpass'); 

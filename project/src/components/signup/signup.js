@@ -27,7 +27,7 @@ export const SignUp = () => {
       if (response.data.message) {
         console.log(response?.data?.values);
         alert(response.data.message);
-        navigate('/home1');
+        navigate('/signin');
       } else {
         alert(response.data.error);
       }
