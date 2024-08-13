@@ -19,7 +19,6 @@ export const ForgotPassword = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Initialize the useNavigate hook
   const navigate = useNavigate();
 
   const handlePasswordReset = async () => {
@@ -34,7 +33,6 @@ export const ForgotPassword = () => {
       const response = await axios.post(api + "/resetpassword", { email, newPassword, confirmPassword });
       alert(response.data.message);
       
-      // Redirect to home page on successful password reset
       navigate('/signin');
     } catch (error) {
       console.error(error);
