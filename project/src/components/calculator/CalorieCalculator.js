@@ -1,4 +1,3 @@
-// src/components/CalorieCalculator.js
 import React, { useState } from 'react';
 import { Box, FormControl, FormLabel, Input, Button, VStack, Heading } from '@chakra-ui/react';
 
@@ -10,7 +9,6 @@ const CalorieCalculator = () => {
   const [calories, setCalories] = useState(null);
 
   const calculateCalories = () => {
-    // Basic BMR Calculation
     const bmr = 10 * weight + 6.25 * height - 5 * age + 5;
     const totalCalories = bmr * parseFloat(activityLevel);
     setCalories(totalCalories);

@@ -27,7 +27,6 @@ export const SignUp = () => {
       if (response.data.message) {
         console.log(response?.data?.values);
         alert(response.data.message);
-        // Redirect to home page on successful signup
         navigate('/home1');
       } else {
         alert(response.data.error);
@@ -40,7 +39,7 @@ export const SignUp = () => {
   return (
     <Box
       minH="100vh"
-      bgImage="url('sports-nutrition.jpg')"  // Add your background image URL here
+      bgImage="url('sports-nutrition.jpg')"  
       bgSize="cover"
       bgPosition="center"
       bgRepeat="no-repeat"

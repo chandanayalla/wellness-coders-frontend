@@ -14,6 +14,7 @@ import MacronutrientCalculator from './components/calculator/MacronutrientCalcul
 import NutritionInfoPage from './components/Nutrition/NutritionInfoPage';
 import HomePage from './components/addmeal/MealPlanningApp.js';
 import ResultPage from './components/result/result.js';
+import { Menu } from '@chakra-ui/react';
 //import Navbar from './'
 
 
@@ -34,7 +35,7 @@ function App() {
         <Route path="/HydrationCalculator" element={<HydrationCalculator/>}/>
         <Route path="/MacronutritionCalculator" element={<MacronutrientCalculator/>}/>
         <Route path="/nutrition" element={<NutritionInfoPage/>}/>
-        {/* <Route path="/about" element={<Menu/>}/> */}
+        <Route path="/about" element={<Menu/>}/>
         <Route path="/forgotpass" element={<ForgotPassword />} />
         <Route path="/addmeal" element={<HomePage/>}/>
         <Route path="/result" element={<ResultPage/>}/>

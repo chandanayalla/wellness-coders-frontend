@@ -1,212 +1,3 @@
-// import React from 'react';
-// import { Box, Flex, Link, Image, Heading, Text, Button, useBreakpointValue, useMediaQuery, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
-// import { useNavigate } from 'react-router-dom';
-
-// const Home = () => {
-//   const navigate = useNavigate();
-//   const [isMobile] = useMediaQuery("(max-width: 48em)");
-//   const displayMenu = useBreakpointValue({ base: 'none', md: 'flex' });
-
-//   const handleGetStartedClick = () => {
-//     navigate('/get-started');
-//   };
-
-//   const handleSignInClick = () => {
-//     navigate('/signin');
-//   };
-
-//   const handleSignUpClick = () => {
-//     navigate('/signup');
-//   };
-
-//   const handleSignOutClick = () => {
-//     navigate('/signin');
-//   };
-
-//   return (
-//     <Flex direction="column" minH="100vh" bgGradient="linear(to-r, teal.400, teal.500)">
-//       {/* Top Navigation Bar */}
-//       <Box
-//         as="nav"
-//         width="full"
-//         bg="white"
-//         color="black"
-//         py={4}
-//         px={6}
-//         position="fixed"
-//         top={0}
-//         left={0}
-//         zIndex={1}
-//         boxShadow="lg"
-//       >
-//         <Flex align="center" justify="space-between" maxW="1200px" mx="auto">
-//           <Link href="/" aria-label="Homepage">
-//             <Image src="logo2.0.webp" alt="Logo" boxSize="70px" borderRadius="12px" />
-//           </Link>
-
-//           <Flex
-//             as="ul"
-//             listStyleType="none"
-//             spacing={4}
-//             align="center"
-//             display={displayMenu}
-//             gap={6}
-//           >
-//             <Box as="li">
-//               <Link href="/" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
-//                 HOME
-//               </Link>
-//             </Box>
-//             <Box as="li">
-//               <Link href="/about" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
-//                 ABOUT
-//               </Link>
-//             </Box>
-//             <Box as="li">
-//               <Link href="/contact" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
-//                 CONTACT
-//               </Link>
-//             </Box>
-//           </Flex>
-
-//           {/* Profile Menu and Sign In/Sign Up Buttons */}
-//           <Flex align="center">
-//             {/* Sign In Button */}
-//             <Button
-//               variant="solid"
-//               colorScheme="teal"
-//               size="sm"
-//               borderRadius="full"
-//               onClick={handleSignInClick}
-//               ml={4}
-//             >
-//               Sign In
-//             </Button>
-
-//             {/* Sign Up Button */}
-//             <Button
-//               variant="solid"
-//               colorScheme="teal"
-//               size="sm"
-//               borderRadius="full"
-//               onClick={handleSignUpClick}
-//               ml={4}
-//             >
-//               Sign Up
-//             </Button>
-
-//             {/* Mobile Menu Button */}
-//             {isMobile && (
-//               <Box ml={4}>
-//                 <Button variant="outline" colorScheme="teal" size="sm" borderRadius="full">
-//                   Menu
-//                 </Button>
-//               </Box>
-//             )}
-
-//             {/* Profile Menu (Commented Out for Now) */}
-//             <Box ml={4}>
-//               {/* <Menu>
-//                 <MenuButton as={Button} colorScheme="teal" size="sm" borderRadius="full">
-//                   Profile
-//                 </MenuButton>
-//                 <MenuList>
-//                   <MenuItem onClick={handleSignInClick}>Sign In</MenuItem>
-//                   <MenuItem onClick={handleSignOutClick}>Sign Out</MenuItem>
-//                 </MenuList>
-//               </Menu> */}
-//             </Box>
-//           </Flex>
-//         </Flex>
-//       </Box>
-
-//       {/* Main Content */}
-//       <Box
-//         pt="80px"
-//         flex="1"
-//         display="flex"
-//         alignItems="center"
-//         justifyContent="center"
-//         textAlign="center"
-//         color="white"
-//         px={4}
-//         bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
-//         minH="calc(100vh - 80px)"
-//       >
-//         <Flex
-//           direction="column"
-//           align="center"
-//           justify="center"
-//           maxW="800px"
-//           mx="auto"
-//         >
-//           <Heading as="h1" size="2xl" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
-//             Welcome to Our Website
-//           </Heading>
-//           <Text fontSize="lg" mb={6} textShadow="1px 1px 3px rgba(0, 0, 0, 0.5)">
-//             We are delighted to have you here! Explore our site to learn more about sports nutrition and meal planning.
-//           </Text>
-//           {/* <Button
-//             onClick={handleGetStartedClick}
-//             size="lg"
-//             colorScheme="teal"
-//             variant="solid"
-//             _hover={{ bg: 'teal.800' }}
-//             borderRadius="full"
-//           >
-//             Get Started
-//           </Button> */}
-//         </Flex>
-//       </Box>
-
-    
-//       <Box
-//         as="footer"
-//         bg="white"
-//         color="black"
-//         py={6}
-//         px={4}
-//         textAlign="center"
-//         width="full"
-//         borderTop="1px solid rgba(255, 255, 255, 0.3)"
-//       >
-//         <Flex direction="column" align="center">
-//           <Heading as="h3" size="lg" mb={2} textTransform="uppercase">
-//             Explore Nutrition & Meal Planning
-//           </Heading>
-//           <Text mb={4} fontSize="md">
-//             Your go-to resource for healthy eating and meal planning.
-//           </Text>
-//           <Flex as="ul" listStyleType="none" spacing={4} mb={4} justify="center">
-//             <Box as="li" mx={2}>
-//               <Link href="/nutrition" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
-//                 Nutrition
-//               </Link>
-//             </Box>
-//             <Box as="li" mx={2}>
-//               <Link href="/meal-planning" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
-//                 Meal Planning
-//               </Link>
-//             </Box>
-//             <Box as="li" mx={2}>
-//               <Link href="/recipes" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
-//                 Recipes
-//               </Link>
-//             </Box>
-//           </Flex>
-//           <Text fontSize="sm" opacity={0.8}>
-//             © 2024 Wellness Coders. All rights reserved.
-//           </Text>
-//         </Flex>
-//       </Box>
-//     </Flex>
-//   );
-// };
-
-// export default Home;
-
-
-
 import React from 'react';
 import { Box, Flex, Link, Image, Heading, Text, Button, useBreakpointValue, useMediaQuery, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
@@ -215,9 +6,6 @@ const Home = () => {
   const navigate = useNavigate();
   const [isMobile] = useMediaQuery("(max-width: 48em)");
 
-  const handleGetStartedClick = () => {
-    navigate('/get-started');
-  };
 
   const handleSignInClick = () => {
     navigate('/signin');
@@ -227,13 +15,9 @@ const Home = () => {
     navigate('/signup');
   };
 
-  const handleSignOutClick = () => {
-    navigate('/signin');
-  };
-
   return (
     <Flex direction="column" minH="100vh" bgGradient="linear(to-r, teal.400, teal.500)">
-      {/* Top Navigation Bar */}
+      
       <Box
         as="nav"
         width="full"
@@ -278,7 +62,7 @@ const Home = () => {
           </Flex>
 
           <Flex align="center">
-            {/* Sign In Button */}
+        
             <Button
               variant="solid"
               colorScheme="teal"
@@ -290,7 +74,6 @@ const Home = () => {
               Sign In
             </Button>
 
-            {/* Sign Up Button */}
             <Button
               variant="solid"
               colorScheme="teal"
@@ -302,7 +85,6 @@ const Home = () => {
               Sign Up
             </Button>
 
-            {/* Mobile Menu Button */}
             {isMobile && (
               <Box ml={4}>
                 <Menu>
@@ -320,8 +102,6 @@ const Home = () => {
           </Flex>
         </Flex>
       </Box>
-
-      {/* Main Content */}
       <Box
         pt="80px"
         flex="1"
@@ -341,22 +121,13 @@ const Home = () => {
           maxW="800px"
           mx="auto"
         >
-          <Heading as="h1" size="2xl" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
-            Welcome to Our Website
+          <Heading as="h1" size="2xl" mb={6} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
+            Sports Nutrition and Meal Planning
           </Heading>
           <Text fontSize="lg" mb={6} textShadow="1px 1px 3px rgba(0, 0, 0, 0.5)">
             We are delighted to have you here! Explore our site to learn more about sports nutrition and meal planning.
           </Text>
-          {/* <Button
-            onClick={handleGetStartedClick}
-            size="lg"
-            colorScheme="teal"
-            variant="solid"
-            _hover={{ bg: 'teal.800' }}
-            borderRadius="full"
-          >
-            Get Started
-          </Button> */}
+    
         </Flex>
       </Box>
 

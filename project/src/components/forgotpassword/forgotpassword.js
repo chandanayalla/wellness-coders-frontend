@@ -44,6 +44,17 @@ export const ForgotPassword = () => {
 
   return (
     <Box
+       backgroundImage="url('/sports-nutrition.jpg')" 
+       backgroundSize="cover"
+       backgroundPosition="center"
+       backgroundRepeat="no-repeat"
+       minHeight="100vh"
+       display="flex"
+       justifyContent="center"
+       alignItems="center"
+       p={4}
+      >
+    <Box
       maxW="md"
       mx="auto"
       p={8}
@@ -107,5 +118,6 @@ export const ForgotPassword = () => {
         </Button>
       </VStack>
     </Box>
+  </Box>
   );
 };

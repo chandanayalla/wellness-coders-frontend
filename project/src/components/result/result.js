@@ -27,7 +27,7 @@ const ResultPage = () => {
           borderRadius="lg" 
           boxShadow="lg" 
           bg="white" 
-          opacity={0.9} // Slight opacity for better readability
+          opacity={0.9}
         >
           <Heading as="h1" size="xl" mb={6} color="teal.600">Submitted Meals</Heading>
           <Box p={5} borderWidth={1} borderRadius="lg" bg="gray.50">

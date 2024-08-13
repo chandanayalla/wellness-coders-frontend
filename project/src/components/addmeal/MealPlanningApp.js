@@ -38,8 +38,6 @@ const App = () => {
     try {
       const response = await axios.post(api + "/meals", data);
       setShowAlert(true);
-
-      // Redirect to the result page with the submitted data
       navigate('/result', { state: data });
     } catch (error) {
       console.error('Error submitting meal data:', error);
@@ -47,13 +45,22 @@ const App = () => {
   };
 
   return (
+    <Box
+    backgroundImage="url('/athlete.avif')" 
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        minHeight="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        p={4}
+    >
     <ChakraProvider>
       <Container maxW="container.md" mt={10} p={8} borderWidth={1} borderRadius="lg" boxShadow="lg" bg="white">
         <VStack spacing={6} align="stretch">
           <Heading as="h1" size="xl" color="teal.600">Athlete Meal Planning</Heading>
           <Divider />
-
-          {/* Breakfast Section */}
           <Box>
             <Heading as="h2" size="md" mb={4} color="teal.500">Breakfast</Heading>
             <FormControl>
@@ -82,7 +89,7 @@ const App = () => {
 
           <Divider />
 
-          {/* Lunch Section */}
+    
           <Box>
             <Heading as="h2" size="md" mb={4} color="teal.500">Lunch</Heading>
             <FormControl>
@@ -111,7 +118,6 @@ const App = () => {
 
           <Divider />
 
-          {/* Dinner Section */}
           <Box>
             <Heading as="h2" size="md" mb={4} color="teal.500">Dinner</Heading>
             <FormControl>
@@ -152,6 +158,7 @@ const App = () => {
         </VStack>
       </Container>
     </ChakraProvider>
+    </Box>
   );
 };
 

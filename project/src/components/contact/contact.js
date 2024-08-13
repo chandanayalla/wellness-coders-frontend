@@ -3,7 +3,7 @@ import { Box, Text, VStack, Divider, Flex, Icon, useBreakpointValue } from '@cha
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
-  // Use breakpoint value for responsive styling
+  
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (

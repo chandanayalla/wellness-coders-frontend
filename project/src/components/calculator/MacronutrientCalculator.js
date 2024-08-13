@@ -1,4 +1,3 @@
-// src/components/MacronutrientCalculator.js
 import React, { useState } from 'react';
 import { Box, FormControl, FormLabel, Input, Button, VStack, Heading,Text } from '@chakra-ui/react';
 
