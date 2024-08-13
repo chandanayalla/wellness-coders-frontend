@@ -50,7 +50,7 @@ const Home1 = () => {
               </Link>
             </Box>
             <Box as="li">
-              <Link href="/about" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
+              <Link href="/about1" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
                 ABOUT
               </Link>
             </Box>
