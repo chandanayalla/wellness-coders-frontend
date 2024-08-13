@@ -11,17 +11,12 @@ const Home1 = () => {
     navigate('/nutrition');
   };
 
-//   const handleSignInClick = () => {
-//     navigate('/signin');
-//   };
-
   const handleSignOutClick = () => {
     navigate('/');
   };
 
   return (
     <Flex direction="column" minH="100vh" bgGradient="linear(to-r, teal.400, teal.500)">
-      {/* Top Navigation Bar */}
       <Box
         as="nav"
         width="full"
@@ -49,7 +44,8 @@ const Home1 = () => {
             gap={6}
           >
             <Box as="li">
-              <Link href="/" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
+            
+              <Link href="/home1" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
                 HOME
               </Link>
             </Box>
@@ -65,9 +61,8 @@ const Home1 = () => {
             </Box>
           </Flex>
 
-          {/* Profile Menu and Sign In Button */}
+  
           <Flex align="center">
-            {/* Sign In Button */}
             <Button
               variant="solid"
               colorScheme="teal"
@@ -79,7 +74,6 @@ const Home1 = () => {
               Sign Out
             </Button>
 
-            {/* Mobile Menu Button */}
             {isMobile && (
               <Box ml={4}>
                 <Button variant="outline" colorScheme="teal" size="sm" borderRadius="full">
@@ -88,23 +82,21 @@ const Home1 = () => {
               </Box>
             )}
 
-            {/* Profile Menu */}
             <Box ml={4}>
               <Menu>
                 <MenuButton as={Button} colorScheme="teal" size="sm" borderRadius="full">
                   Profile
                 </MenuButton>
-                {/* <MenuList>
-                  <MenuItem onClick={handleSignInClick}>Sign In</MenuItem>
+                <MenuList>
                   <MenuItem onClick={handleSignOutClick}>Sign Out</MenuItem>
-                </MenuList> */}
+                </MenuList>
               </Menu>
             </Box>
           </Flex>
         </Flex>
       </Box>
 
-      {/* Main Content */}
+  
       <Box
         pt="80px"
         flex="1"
@@ -143,7 +135,7 @@ const Home1 = () => {
         </Flex>
       </Box>
 
-      {/* Footer */}
+    
       <Box
         as="footer"
         bg="white"

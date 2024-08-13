@@ -36,7 +36,7 @@ const About = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        //textAlign="center"
+        textAlign="center"
         color="white"
         px={4}
         bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
@@ -52,22 +52,7 @@ const About = () => {
           <Heading as="h1" size="2xl" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
             About
           </Heading>
-          
-          {/* Image for sports nutrition */}
-          {/* <Image
-            src=""  // Replace with a relevant image URL
-            alt="Sports Nutrition"
-            borderRadius="lg"
-            mb={6}
-            boxShadow="lg"
-          /> */}
-
-
-
-
-
-          
-<Text>
+          <Text>
             Meal planning is a crucial aspect of sports nutrition that plays a significant role in enhancing athletic performance. Whether you are an elite athlete or a recreational sports enthusiast, fueling your body with the right nutrients is essential for optimal performance. This article will guide you through the ins and outs of meal planning for sports nutrition, providing valuable tips and strategies to help you achieve your fitness goals. From understanding macronutrients to timing your meals, we will delve into the key components of a well-balanced sports nutrition plan. So, let’s dive in and discover how proper meal planning can take your athletic performance to the next level.
           </Text>
 
@@ -355,12 +340,6 @@ You may even save money by meal planning, not only by eating fewer meals out but
 idea what to do with it,” Turoff says. Inevitably, that food will sit in your fridge or cupboard until you finally throw it out.
  But when you plan out your meals, you know what and how much food to buy, which leads to less food (and money) wasted.
           </text>
-        
-
-
-
-
-
 
         </Flex>
       </Box>

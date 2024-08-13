@@ -282,11 +282,20 @@ export const SignIn = () => {
 
   return (
     <Box 
-      height="100vh" 
-      display="flex" 
-      justifyContent="center" 
-      alignItems="center" 
-      bgGradient="linear(to-r, teal.500, green.500)"
+      // height="100vh" 
+      // display="flex" 
+      // justifyContent="center" 
+      // alignItems="center" 
+      // bgGradient="linear(to-r, teal.500, green.500)"
+      backgroundImage="url('/sports-nutrition.jpg')" 
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        minHeight="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        p={4}
     >
       <Card 
         width="400px" 
