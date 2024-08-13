@@ -38,7 +38,7 @@ const NutritionInfoPage = () => {
           Proper nutrition is essential for athletes and fitness enthusiasts to optimize performance, recovery, and overall health.
           Knowing your calorie needs, macronutrient ratios, and hydration strategies is crucial in tailoring your diet to meet your goals.
         </Text>
-        <Text fontSize="md">
+        <Text fontSize="larger">
           <ul>
           <strong>Calorie Needs:</strong> 
           <li>Calories are essential for human health. The key is consuming the right amount.</li>
@@ -47,7 +47,7 @@ const NutritionInfoPage = () => {
           <li>Foods high in energy but low in nutritional value provide empty calories.</li>
           </ul>
         </Text>
-        <Text fontSize="md">
+        <Text fontSize="larger">
           <strong>Macronutrient Ratios:</strong> 
           <ul>
             <li>Macronutrients provide the body with energy, help prevent disease, and allow the body to function correctly.</li>
@@ -55,7 +55,7 @@ const NutritionInfoPage = () => {
             <li>There are also a number of factors that can influence the quantity of macronutrients people may need.</li>
           </ul>
         </Text>
-        <Text fontSize="md">
+        <Text fontSize="larger">
           <strong>Hydration Strategy:</strong> 
           <ul>
             <li>Water is one of the most important nutrients your body needs to function optimally. Dehydration occurs when you don’t replace the fluids you lose.</li>
@@ -66,7 +66,7 @@ const NutritionInfoPage = () => {
       </VStack>
 
       <SimpleGrid columns={3} spacing={8} mb={12}>
-        <Box p={6} borderWidth="1px" borderRadius="md" bg="white" boxShadow="md">
+        <Box p={6} borderWidth="1px" borderRadius="larger" bg="white" boxShadow="md">
           <Text fontSize="xl" mb={4}>
             Calorie Counter
           </Text>
@@ -77,7 +77,7 @@ const NutritionInfoPage = () => {
             Calorie 
           </Button>
         </Box>
-        <Box p={6} borderWidth="1px" borderRadius="md" bg="white" boxShadow="md">
+        <Box p={6} borderWidth="1px" borderRadius="larger" bg="white" boxShadow="md">
           <Text fontSize="xl" mb={4}>
             Macronutrients Calculator
           </Text>
@@ -88,7 +88,7 @@ const NutritionInfoPage = () => {
             Macronutrient
           </Button>
         </Box>
-        <Box p={6} borderWidth="1px" borderRadius="md" bg="white" boxShadow="md">
+        <Box p={6} borderWidth="1px" borderRadius="larger" bg="white" boxShadow="md">
           <Text fontSize="xl" mb={4}>
             Hydration Strategy
           </Text>

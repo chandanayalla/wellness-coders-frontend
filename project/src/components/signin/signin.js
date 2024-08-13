@@ -26,7 +26,7 @@ export const SignIn = () => {
       .then((res) => {
         if (res.data.message) {
           console.log(res?.data?.values);
-          alert(res.data.message);
+          // alert(res.data.message);
           navigate("/home1"); 
         } else {
           alert(res.data.error);

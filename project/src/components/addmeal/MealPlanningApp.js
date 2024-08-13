@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <Box
-    backgroundImage="url('/athlete.avif')" 
+    backgroundImage="url('/dinner1.avif')" 
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
@@ -59,17 +59,18 @@ const App = () => {
     <ChakraProvider>
       <Container maxW="container.md" mt={10} p={8} borderWidth={1} borderRadius="lg" boxShadow="lg" bg="white">
         <VStack spacing={6} align="stretch">
-          <Heading as="h1" size="xl" color="teal.600">Athlete Meal Planning</Heading>
+          <Heading as="h1" size="xl" color="red">Athlete Meal Planning</Heading>
           <Divider />
           <Box>
-            <Heading as="h2" size="md" mb={4} color="teal.500">Breakfast</Heading>
+            <Heading as="h2" size="md" mb={4} color="black">Breakfast</Heading>
             <FormControl>
-              <FormLabel>Meal</FormLabel>
+              <FormLabel color="black">Meal</FormLabel>
               <Select
+                //backgroundColor={'white'}
                 placeholder="Select Breakfast"
                 value={breakfast}
                 onChange={(e) => setBreakfast(e.target.value)}
-                focusBorderColor="teal.500"
+                focusBorderColor="black"
               >
                 <option value="Protein-Packed Smoothie with Spinach, Banana, and Protein Powder">Protein-Packed Smoothie with Spinach, Banana, and Protein Powder</option>
                 <option value="Quinoa Porridge with Almonds and Berries">Quinoa Porridge with Almonds and Berries</option>
@@ -77,12 +78,13 @@ const App = () => {
                 <option value="Egg White Omelette with Spinach and Avocado">Egg White Omelette with Spinach and Avocado</option>
                 <option value="Oatmeal with Chia Seeds, Flaxseeds, and Fresh Fruit">Oatmeal with Chia Seeds, Flaxseeds, and Fresh Fruit</option>
               </Select>
-              <FormLabel mt={4}>Or Enter Custom Breakfast</FormLabel>
+              <FormLabel mt={4} color="black">Or Enter Custom Breakfast</FormLabel>
               <Input
                 placeholder="Enter custom breakfast"
                 value={customMeal.breakfast}
                 onChange={(e) => setCustomMeal({ ...customMeal, breakfast: e.target.value })}
-                focusBorderColor="teal.500"
+                focusBorderColor="black"
+                //backgroundColor={'white'}
               />
             </FormControl>
           </Box>
@@ -91,14 +93,15 @@ const App = () => {
 
     
           <Box>
-            <Heading as="h2" size="md" mb={4} color="teal.500">Lunch</Heading>
+            <Heading as="h2" size="md" mb={4} color="black">Lunch</Heading>
             <FormControl>
-              <FormLabel>Meal</FormLabel>
+              <FormLabel color="black">Meal</FormLabel>
               <Select
+                //backgroundColor={'white'}
                 placeholder="Select Lunch"
                 value={lunch}
                 onChange={(e) => setLunch(e.target.value)}
-                focusBorderColor="teal.500"
+                focusBorderColor="black"
               >
                 <option value="Grilled Chicken Salad with Quinoa and Mixed Greens">Grilled Chicken Salad with Quinoa and Mixed Greens</option>
                 <option value="Salmon Bowl with Brown Rice, Edamame, and Avocado">Salmon Bowl with Brown Rice, Edamame, and Avocado</option>
@@ -106,12 +109,13 @@ const App = () => {
                 <option value="Lentil and Vegetable Soup with Whole-Grain Bread">Lentil and Vegetable Soup with Whole-Grain Bread</option>
                 <option value="Chickpea and Avocado Wrap with Spinach">Chickpea and Avocado Wrap with Spinach</option>
               </Select>
-              <FormLabel mt={4}>Or Enter Custom Lunch</FormLabel>
+              <FormLabel mt={4} color="black">Or Enter Custom Lunch</FormLabel>
               <Input
+                //backgroundColor={'white'}
                 placeholder="Enter custom lunch"
                 value={customMeal.lunch}
                 onChange={(e) => setCustomMeal({ ...customMeal, lunch: e.target.value })}
-                focusBorderColor="teal.500"
+                focusBorderColor="black"
               />
             </FormControl>
           </Box>
@@ -119,14 +123,15 @@ const App = () => {
           <Divider />
 
           <Box>
-            <Heading as="h2" size="md" mb={4} color="teal.500">Dinner</Heading>
+            <Heading as="h2" size="md" mb={4} color="black">Dinner</Heading>
             <FormControl>
-              <FormLabel>Meal</FormLabel>
+              <FormLabel color="black">Meal</FormLabel>
               <Select
+                //backgroundColor={'white'}
                 placeholder="Select Dinner"
                 value={dinner}
                 onChange={(e) => setDinner(e.target.value)}
-                focusBorderColor="teal.500"
+                focusBorderColor="black"
               >
                 <option value="Baked Chicken Breast with Roasted Vegetables and Sweet Potatoes">Baked Chicken Breast with Roasted Vegetables and Sweet Potatoes</option>
                 <option value="Tuna and Avocado Salad with a Side of Quinoa">Tuna and Avocado Salad with a Side of Quinoa</option>
@@ -134,19 +139,20 @@ const App = () => {
                 <option value="Stuffed Bell Peppers with Ground Turkey and Black Beans">Stuffed Bell Peppers with Ground Turkey and Black Beans</option>
                 <option value="Salmon with a Side of Steamed Asparagus and Wild Rice">Salmon with a Side of Steamed Asparagus and Wild Rice</option>
               </Select>
-              <FormLabel mt={4}>Or Enter Custom Dinner</FormLabel>
+              <FormLabel mt={4} color="black">Or Enter Custom Dinner</FormLabel>
               <Input
+                //backgroundColor={'white'}
                 placeholder="Enter custom dinner"
                 value={customMeal.dinner}
                 onChange={(e) => setCustomMeal({ ...customMeal, dinner: e.target.value })}
-                focusBorderColor="teal.500"
+                focusBorderColor="black"
               />
             </FormControl>
           </Box>
 
           <Divider />
 
-          <Button colorScheme="teal" size="lg" onClick={handleSubmit}>Submit</Button>
+          <Button colorScheme="red" size="lg" onClick={handleSubmit}>Submit</Button>
 
           {showAlert && (
             <Alert status="success" variant="subtle" mt={4}>
@@ -159,6 +165,7 @@ const App = () => {
       </Container>
     </ChakraProvider>
     </Box>
+
   );
 };
 

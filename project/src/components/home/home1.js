@@ -14,6 +14,9 @@ const Home1 = () => {
   const handleSignOutClick = () => {
     navigate('/');
   };
+  const handleUserDetailsClick = () => {
+    navigate('/Profile');
+  };
 
   return (
     <Flex direction="column" minH="100vh" bgGradient="linear(to-r, teal.400, teal.500)">
@@ -63,7 +66,7 @@ const Home1 = () => {
 
   
           <Flex align="center">
-            <Button
+            {/* <Button
               variant="solid"
               colorScheme="teal"
               size="sm"
@@ -72,13 +75,20 @@ const Home1 = () => {
               ml={4}
             >
               Sign Out
-            </Button>
+            </Button> */}
 
             {isMobile && (
               <Box ml={4}>
-                <Button variant="outline" colorScheme="teal" size="sm" borderRadius="full">
-                  Menu
-                </Button>
+                <Menu>
+                  <MenuButton as={Button} variant="outline" colorScheme="teal" size="sm" borderRadius="full">
+                    Menu
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => navigate('/home1')}>Home</MenuItem>
+                    <MenuItem onClick={() => navigate('/about1')}>About</MenuItem>
+                    <MenuItem onClick={() => navigate('/contact')}>Contact</MenuItem>
+                  </MenuList>
+                </Menu>
               </Box>
             )}
 
@@ -88,6 +98,7 @@ const Home1 = () => {
                   Profile
                 </MenuButton>
                 <MenuList>
+                  <MenuItem onClick={handleUserDetailsClick}>User Details</MenuItem>
                   <MenuItem onClick={handleSignOutClick}>Sign Out</MenuItem>
                 </MenuList>
               </Menu>

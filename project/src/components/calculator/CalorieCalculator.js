@@ -15,7 +15,18 @@ const CalorieCalculator = () => {
   };
 
   return (
-    <Box p={6} shadow="md" borderWidth="1px" borderRadius="lg">
+    <Box
+    backgroundImage="url('/calorie1.jpg')" 
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        minHeight="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        p={4}
+    >
+    <Box p={6} shadow="larger" borderWidth="1px" borderRadius="lg" backgroundColor="white">
       <Heading size="lg" mb={4}>Calorie Needs Calculator</Heading>
       <VStack spacing={4}>
         <FormControl id="weight">
@@ -38,6 +49,7 @@ const CalorieCalculator = () => {
         {calories && <Box mt={4}>Your daily calorie needs: {calories.toFixed(2)} kcal</Box>}
       </VStack>
     </Box>
+  </Box>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Link, Image, Heading, Text, Button, useBreakpointValue, useMediaQuery, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
+import { Box, Flex, Link, Image, Heading, Text, Button, useMediaQuery, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -62,6 +62,21 @@ const Home = () => {
           </Flex>
 
           <Flex align="center">
+
+          {isMobile && (
+              <Box ml={4}>
+                <Menu>
+                  <MenuButton as={Button} variant="outline" colorScheme="teal" size="sm" borderRadius="full">
+                    Menu
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => navigate('/')}>Home</MenuItem>
+                    <MenuItem onClick={() => navigate('/about')}>About</MenuItem>
+                    <MenuItem onClick={() => navigate('/contact')}>Contact</MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
+            )}
         
             <Button
               variant="solid"
@@ -85,20 +100,7 @@ const Home = () => {
               Sign Up
             </Button>
 
-            {isMobile && (
-              <Box ml={4}>
-                <Menu>
-                  <MenuButton as={Button} variant="outline" colorScheme="teal" size="sm" borderRadius="full">
-                    Menu
-                  </MenuButton>
-                  <MenuList>
-                    <MenuItem onClick={() => navigate('/')}>Home</MenuItem>
-                    <MenuItem onClick={() => navigate('/about')}>About</MenuItem>
-                    <MenuItem onClick={() => navigate('/contact')}>Contact</MenuItem>
-                  </MenuList>
-                </Menu>
-              </Box>
-            )}
+            
           </Flex>
         </Flex>
       </Box>
@@ -175,4 +177,3 @@ const Home = () => {
 };
 
 export default Home;
-

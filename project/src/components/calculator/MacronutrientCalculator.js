@@ -20,7 +20,18 @@ const MacronutrientCalculator = () => {
   };
 
   return (
-    <Box p={6} shadow="md" borderWidth="1px" borderRadius="lg">
+    <Box
+    backgroundImage="url('/calorie1.jpg')" 
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        minHeight="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        p={4}
+    >
+    <Box p={6} shadow="md" borderWidth="1px" borderRadius="lg" bg="white">
       <Heading size="lg" mb={4}>Macronutrient Ratio Calculator</Heading>
       <VStack spacing={4}>
         <FormControl id="calories">
@@ -45,6 +56,7 @@ const MacronutrientCalculator = () => {
         )}
       </VStack>
     </Box>
+   </Box> 
   );
 };
 

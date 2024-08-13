@@ -9,7 +9,7 @@ const ResultPage = () => {
   return (
     <ChakraProvider>
       <Box
-        backgroundImage="url('/result.jpg')" 
+        backgroundImage="url('/calorie1.jpg')" 
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
@@ -18,7 +18,7 @@ const ResultPage = () => {
         justifyContent="center"
         alignItems="center"
         p={4}
-      >
+        >
         <Container 
           maxW="container.md" 
           mt={10} 
@@ -30,7 +30,7 @@ const ResultPage = () => {
           opacity={0.9}
         >
           <Heading as="h1" size="xl" mb={6} color="teal.600">Submitted Meals</Heading>
-          <Box p={5} borderWidth={1} borderRadius="lg" bg="gray.50">
+          <Box p={5} borderWidth={1} borderRadius="lg" bg="gray.55">
             <Heading as="h2" size="lg" color="teal.600" mb={4}>Selected Meals:</Heading>
             <List spacing={3}>
               <ListItem><strong>Breakfast:</strong> {breakfast || 'None selected'}</ListItem>

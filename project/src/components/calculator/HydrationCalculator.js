@@ -11,7 +11,19 @@ const HydrationCalculator = () => {
   };
 
   return (
-    <Box p={6} shadow="md" borderWidth={1} borderRadius="lg">
+    <Box
+    backgroundImage="url('/calorie1.jpg')" 
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        minHeight="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        p={4}
+    >
+
+    <Box p={6} shadow="md" borderWidth={1} borderRadius="lg" bg="white">
       <Heading size="lg" mb={4}>Hydration Calculator</Heading>
       <VStack spacing={4}>
         <FormControl id="weight">
@@ -22,6 +34,7 @@ const HydrationCalculator = () => {
         {hydration && <Box mt={4}>Your daily water intake: {hydration.toFixed(2)} liters</Box>}
       </VStack>
     </Box>
+  </Box>
   );
 };
 
