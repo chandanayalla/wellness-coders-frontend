@@ -152,17 +152,17 @@ const Home = () => {
           </Text>
           <Flex as="ul" listStyleType="none" spacing={4} mb={4} justify="center">
             <Box as="li" mx={2}>
-              <Link href="/nutrition" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+              <Link fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                 Nutrition
               </Link>
             </Box>
             <Box as="li" mx={2}>
-              <Link href="/meal-planning" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+              <Link  fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                 Meal Planning
               </Link>
             </Box>
             <Box as="li" mx={2}>
-              <Link href="/recipes" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+              <Link  fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                 Recipes
               </Link>
             </Box>

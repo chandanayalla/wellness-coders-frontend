@@ -53,6 +53,7 @@ export const ForgotPassword = () => {
        justifyContent="center"
        alignItems="center"
        p={4}
+       
       >
     <Box
       maxW="md"
@@ -63,6 +64,8 @@ export const ForgotPassword = () => {
       boxShadow="lg"
       mt={12}
       bg="white"
+      height="550px"
+      width="750px"
     >
       <Heading as="h2" size="lg" textAlign="center" color="teal.600" mb={6}>
         Reset Password

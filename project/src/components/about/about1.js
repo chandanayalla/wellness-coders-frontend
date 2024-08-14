@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Heading, Text, Button, Image, Divider } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Button, Image } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const About1 = () => {
@@ -9,7 +9,7 @@ const About1 = () => {
   };
 
   return (
-    <Flex direction="column" minH="100vh" bgGradient="linear(to-r, teal.400, teal.500)">
+    <Flex direction="column" minH="100vh" bgGradient="linear(to-r, #b9eef5, #ff9f00)">
       <Box
         as="nav"
         width="full"
@@ -36,7 +36,7 @@ const About1 = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        textAlign="center"
+        //textAlign="center"
         color="white"
         px={4}
         bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
@@ -49,17 +49,17 @@ const About1 = () => {
           maxW="800px"
           mx="auto"
         >
-          <Heading as="h1" size="2xl" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
+          <Heading as="h1" size="2xl" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)" color="#f5e5b9">
             About
           </Heading>
           <Text>
             Meal planning is a crucial aspect of sports nutrition that plays a significant role in enhancing athletic performance. Whether you are an elite athlete or a recreational sports enthusiast, fueling your body with the right nutrients is essential for optimal performance. This article will guide you through the ins and outs of meal planning for sports nutrition, providing valuable tips and strategies to help you achieve your fitness goals. From understanding macronutrients to timing your meals, we will delve into the key components of a well-balanced sports nutrition plan. So, let’s dive in and discover how proper meal planning can take your athletic performance to the next level.
           </Text>
 
-          <Heading as="h2" size="lg" color="teal.500">Importance of Meal Planning for Sports Nutrition</Heading>
+          <Heading as="h2" size="lg" color="#f5e5b9">Importance of Meal Planning for Sports Nutrition</Heading>
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Optimizing Performance</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Optimizing Performance</Heading>
             <Text>
               Proper nutrition plays a vital role in optimizing performance for athletes. Meal planning allows athletes to carefully consider the nutrients they need to fuel their bodies for optimal performance. By strategically planning meals, athletes can ensure they are consuming the right balance of carbohydrates, proteins, and fats.
             </Text>
@@ -74,10 +74,10 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Enhancing Recovery</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Enhancing Recovery</Heading>
             <Text>
               Recovery is a crucial aspect of sports nutrition, and meal planning can greatly contribute to the recovery process. Planning meals that include a combination of carbohydrates and proteins can help replenish glycogen stores and repair damaged muscle tissues after intense exercise.
             </Text>
@@ -92,7 +92,7 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
           
           <Text fontSize="lg" mb={6} textShadow="1px 1px 3px rgba(0, 0, 0, 0.5)">
             The goal of sports nutrition is to ensure you’re well-hydrated, well-fueled, and well-nourished.
@@ -135,7 +135,7 @@ const About1 = () => {
 
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Maintaining Energy Levels</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Maintaining Energy Levels</Heading>
             <Text>
               Sustaining energy levels throughout training sessions or competitions is crucial for athletes to perform at their best. Meal planning allows athletes to consume the appropriate amount and type of nutrients to maintain optimal energy levels.
             </Text>
@@ -150,12 +150,12 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
-          <Heading as="h2" size="lg" color="teal.500">Key Macronutrients for Sports Nutrition</Heading>
+          <Heading as="h2" size="lg" color="#f5e5b9">Key Macronutrients for Sports Nutrition</Heading>
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Carbohydrates</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Carbohydrates</Heading>
             <Text>
               Carbohydrates are one of the key macronutrients that play a vital role in sports nutrition. They serve as the primary source of energy for athletes and help optimize performance during workouts and competitions. Carbohydrates are broken down into glucose, which is then stored in the muscles and liver as glycogen to be used when needed.
             </Text>
@@ -164,10 +164,10 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Proteins</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Proteins</Heading>
             <Text>
               Proteins are another essential macronutrient for sports nutrition. They play a crucial role in muscle repair, recovery, and growth. Athletes require higher protein intake to support their increased muscle mass and repair damaged tissues caused by intense physical activity.
             </Text>
@@ -176,10 +176,10 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Fats</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Fats</Heading>
             <Text>
               Contrary to popular belief, fats are also important for sports nutrition. They provide a concentrated source of energy and help in the absorption of fat-soluble vitamins. Including healthy fats in an athlete’s diet can aid in maintaining proper hormone levels, promoting brain function, and reducing inflammation.
             </Text>
@@ -188,30 +188,30 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
-          <Heading as="h2" size="lg" color="teal.500">Meal Timing and Frequency</Heading>
+          <Heading as="h2" size="lg" color="#f5e5b9">Meal Timing and Frequency</Heading>
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Pre-Workout Nutrition</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Pre-Workout Nutrition</Heading>
             <Text>
               What you eat before a workout can significantly impact your performance. Aim to consume a balanced meal or snack that includes carbohydrates, protein, and a small amount of healthy fats. Carbohydrates provide immediate energy, while protein helps repair and build muscle tissue. Some pre-workout meal ideas include a banana with almond butter, Greek yogurt with granola, or a turkey and avocado sandwich on whole wheat bread.
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Post-Workout Nutrition</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Post-Workout Nutrition</Heading>
             <Text>
               After an intense training session, it’s essential to replenish your body with the nutrients it needs to recover and rebuild. Focus on consuming a combination of carbohydrates and protein within 30 minutes to an hour after exercise. This timing is crucial for maximizing muscle glycogen replenishment and promoting muscle protein synthesis. Opt for options like a protein shake with fruit, a chicken and quinoa bowl, or a salmon salad with sweet potatoes.
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Snacks and Hydration</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Snacks and Hydration</Heading>
             <Text>
               Snacks play a vital role in maintaining energy levels and preventing hunger throughout the day. Opt for nutrient-dense snacks that provide a balance of carbohydrates, protein, and healthy fats. Some healthy snack ideas include trail mix, Greek yogurt with berries, or a peanut butter and banana smoothie.
             </Text>
@@ -223,12 +223,12 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
-          <Heading as="h2" size="lg" color="teal.500">Meal Planning Strategies</Heading>
+          <Heading as="h2" size="lg" color="#f5e5b9">Meal Planning Strategies</Heading>
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Setting Goals and Caloric Needs</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Setting Goals and Caloric Needs</Heading>
             <Text>
               When it comes to meal planning for sports nutrition, one of the first steps is to set specific goals and determine your caloric needs. This will help you tailor your meals to meet your individual needs and optimize your performance.
             </Text>
@@ -240,10 +240,10 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Creating Balanced Meals</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Creating Balanced Meals</Heading>
             <Text>
               To ensure you are fueling your body properly for sports nutrition, it’s important to create balanced meals that incorporate all essential nutrients. A balanced meal typically consists of carbohydrates, proteins, healthy fats, and a variety of vitamins and minerals.
             </Text>
@@ -261,10 +261,10 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Box>
-            <Heading as="h3" size="md" color="teal.500">Meal Prepping and Batch Cooking</Heading>
+            <Heading as="h3" size="md" color="#f5e5b9">Meal Prepping and Batch Cooking</Heading>
             <Text>
               To make meal planning for sports nutrition more convenient and time-efficient, consider incorporating meal prepping and batch cooking into your routine. This involves preparing larger quantities of food in advance and portioning them out for future meals.
             </Text>
@@ -279,7 +279,7 @@ const About1 = () => {
             </Text>
           </Box>
 
-          <Divider />
+          
 
           <Text>
             In conclusion, meal planning plays a crucial role in sports nutrition. By carefully considering the timing and composition of meals, athletes can optimize their performance, enhance recovery, and achieve their fitness goals. A well-balanced diet that includes a variety of nutrients, such as carbohydrates, proteins, and fats, is essential for fueling workouts and supporting muscle growth. Additionally, adequate hydration is paramount for maintaining optimal performance and preventing dehydration. With a structured meal plan tailored to individual needs and goals, athletes can take their sports nutrition to the next level and maximize their athletic potential. So, whether you are a professional athlete or a recreational sports enthusiast, investing time and effort in meal planning can significantly impact your overall performance and well-being.

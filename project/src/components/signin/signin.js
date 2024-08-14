@@ -39,7 +39,7 @@ export const SignIn = () => {
 };
 
   const handleForgotPassword = () => {
-    navigate('/forgotpass'); 
+    navigate('/forgotpass-'); 
   };
 
   const handleSignUp = () => {

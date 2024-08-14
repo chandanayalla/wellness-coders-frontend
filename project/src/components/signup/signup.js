@@ -50,6 +50,8 @@ export const SignUp = () => {
       <Box
         maxW="lg"
         mx="auto"
+        height="650px"
+        width="600px"
         p={8}
         borderWidth={1}
         borderRadius="lg"

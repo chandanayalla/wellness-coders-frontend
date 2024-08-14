@@ -23,7 +23,14 @@ const HydrationCalculator = () => {
         p={4}
     >
 
-    <Box p={6} shadow="md" borderWidth={1} borderRadius="lg" bg="white">
+    <Box p={6} 
+    shadow="md" 
+    borderWidth={1} 
+    borderRadius="lg" 
+    bg="white"
+    height="375px"
+    width="700px"
+    >
       <Heading size="lg" mb={4}>Hydration Calculator</Heading>
       <VStack spacing={4}>
         <FormControl id="weight">
