@@ -4,6 +4,7 @@ import { SignIn } from './components/signin/signin';
 import { SignUp } from './components/signup/signup';
 import Home from './components/home/home';
 import Home1 from './components/home/home1';
+import Home2 from './components/home/home2';
 import About from './components/about/about';
 import SignOut from './components/signout/signout';
 import { ForgotPassword } from './components/forgotpassword/forgotpassword';
@@ -18,7 +19,21 @@ import { Menu } from '@chakra-ui/react';
 import About1 from './components/about/about1.js';
 import RecipePage from './components/recipies/recipies.js';
 import NutritionPage from './components/homenutrition/homenutrition.js';
+import MealPlanning from './components/mealplanning/mealplanning.js';
+import LongJumpPage from './components/athletes/longjump.js';
+import RunnerPage from './components/athletes/runner.js';
+import SwimmerPage from './components/athletes/swimmer.js';
+import WrestlerPage from './components/athletes/wrestler.js';
+import WeightlifterPage from './components/athletes/weightlifter.js';
+import JavelinPage from './components/athletes/javelin.js';
+import PolevaultPage from './components/athletes/polevault.js';
+import CyclistPage from './components/athletes/cyclist.js';
+import ArcheryPage from './components/athletes/archery.js';
+import HurdlePage from './components/athletes/hurdling.js';
+import MarathonPage from './components/athletes/marathon.js';
+import PaymentPage from './components/stores/checkout.js';
 
+import ProductPage from './components/stores/productpage.js';
 //import Navbar from './'
 
 
@@ -46,6 +61,21 @@ function App() {
         <Route path="/result" element={<ResultPage/>}/>
         <Route path="/recipe" element={< RecipePage/>}/>
         <Route path="/homonutri" element={< NutritionPage/>}/>
+        <Route path="/homomeal" element={< MealPlanning/>}/>
+       <Route path="/longjump" element={<LongJumpPage/>}/>
+        <Route path="/runner" element={<RunnerPage/>}/>
+        <Route path="/swimmer" element={<SwimmerPage/>}/>
+        <Route path="/wrestler" element={<WrestlerPage/>}/>
+        <Route path="/weightlifter" element={<WeightlifterPage/>}/>
+        <Route path="/hurdling" element={<HurdlePage/>}/>
+        <Route path="/javelin" element={<JavelinPage/>}/>
+        <Route path="/marathon" element={<MarathonPage/>}/>
+        <Route path="/polevault" element={<PolevaultPage/>}/>
+        <Route path="/cyclist" element={<CyclistPage/>}/>
+        <Route path="/archery" element={<ArcheryPage/>}/>
+        <Route path="/home2" element={<Home2/>}/>
+        <Route path="/product" element={<ProductPage/>}/>
+        <Route path="/checkout" element={<PaymentPage/>}/>
 
 
 </Routes>

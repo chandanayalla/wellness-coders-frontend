@@ -195,11 +195,11 @@ export const SignUp = () => {
             />
           </FormControl>
 
-          <FormControl id="age" isRequired>
-            <FormLabel>Age</FormLabel>
+          <FormControl id="date of birth" isRequired>
+            <FormLabel>Date of birth</FormLabel>
             <Input
-              type="number"
-              placeholder="Enter your age"
+              type="date"
+              placeholder="Enter your dob"
               onChange={handleAgeChange}
               focusBorderColor="black"
               _placeholder={{ color: 'gray.400' }}

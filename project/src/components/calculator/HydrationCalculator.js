@@ -36,7 +36,7 @@ const HydrationCalculator = () => {
         <FormControl id="weight">
           <FormLabel>Weight (kg)</FormLabel>
           <Input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
-        </FormControl>
+        </FormControl><br/><br/>
         <Button colorScheme="teal" onClick={calculateHydration}>Calculate Hydration</Button>
         {hydration && <Box mt={4}>Your daily water intake: {hydration.toFixed(2)} liters</Box>}
       </VStack>

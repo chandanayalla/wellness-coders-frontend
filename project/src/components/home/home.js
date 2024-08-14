@@ -54,17 +54,21 @@ const Home = () => {
                 ABOUT
               </Link>
             </Box>
-            
-            <Box as="li" mx={2}>
-              <Link  href="/about" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
+             <Box as="li" mx={2}>
+              <Link href="/homonutri" fontWeight="bold" _hover={{ textDecoration: 'underline',color: '#e60f2e' }}>
+                NUTRITION
+              </Link>
+            </Box>
+            {/* <Box as="li" mx={2}>
+              <Link  href="/" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
                 MEAL PLANNING
               </Link>
             </Box>
             <Box as="li" mx={2}>
-              <Link  href="/about" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
+              <Link  href="/recipe" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
                 RECIPIES
               </Link>
-            </Box>
+            </Box> */}
           </Flex>
 
           <Flex align="center">
@@ -160,15 +164,15 @@ const Home = () => {
           <Flex as="ul" listStyleType="none" spacing={4} mb={4} justify="center">
             
             <Box as="li">
-              <Link fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+              <Link href="/contact" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                 Contact
               </Link>
             </Box>
-            <Box as="li" mx={2}>
-              <Link fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+            {/* <Box as="li" mx={2}>
+              <Link href="/homonutri" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                 Nutrition
               </Link>
-            </Box>
+            </Box> */}
           </Flex>
           <Text fontSize="sm" opacity={0.8}>
             © 2024 Wellness Coders. All rights reserved.

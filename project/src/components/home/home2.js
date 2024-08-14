@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-const Home1 = () => {
+const Home2 = () => {
   const navigate = useNavigate();
   const [isMobile] = useMediaQuery("(max-width: 48em)");
   const displayMenu = useBreakpointValue({ base: 'none', md: 'flex' });
@@ -21,12 +21,15 @@ const Home1 = () => {
     navigate('/nutrition');
   };
 
-  const handleSignOutClick = () => {
-    sessionStorage.removeItem('auth');
-    navigate('/');
+   const handleUserDetailsClick = () => {
+    navigate('/kjgu');
   };
   const handleStoreClick = () => {
     navigate('/product');
+  };
+  const handleSignOutClick = () => {
+    sessionStorage.removeItem('auth');
+    navigate('/');
   };
 
   const handleEditSubmit = (e) => {
@@ -35,12 +38,12 @@ const Home1 = () => {
     const updatedAuth = {
       Email: formData.get('email'),
       Name: formData.get('name'),
-      Mobile: formData.get('mobile'),
-     // Athlete: formData.get('athlete'),
+     // Mobile: formData.get('mobile'),
+      Athlete: formData.get('athlete'),
       Gender: formData.get('gender'),
       //Height: formData.get('height'),
      // Weight: formData.get('weight'),
-      Age: formData.get('age'),
+      //Age: formData.get('age'),
       DOB: formData.get('dob'),
       isAdmin: auth?.isAdmin || false, 
     };
@@ -217,6 +220,17 @@ const Home1 = () => {
             borderRadius="full"
           >
             Get Started
+          </Button><br/>
+          <Button
+            onClick={handleUserDetailsClick}
+            size="lg"
+            colorScheme="teal"
+            variant="solid"
+            _hover={{ bg: 'teal.800' }}
+            borderRadius="full"
+          >
+            
+            User Details
           </Button>
         </Flex>
       </Box>
@@ -275,10 +289,10 @@ const Home1 = () => {
                 <FormLabel>Athlete Type</FormLabel>
                 <Input name="athlete" defaultValue={auth?.Athlete || ''} />
               </FormControl>
-              {/* <FormControl id="gender" mb={4}>
+              <FormControl id="gender" mb={4}>
                 <FormLabel>Gender</FormLabel>
                 <Input name="gender" defaultValue={auth?.Gender || ''} />
-              </FormControl> */}
+              </FormControl>
               {/* <FormControl id="height" mb={4}>
                 <FormLabel>Height</FormLabel>
                 <Input name="height" defaultValue={auth?.Height || ''} />
@@ -291,10 +305,10 @@ const Home1 = () => {
                 <FormLabel>Age</FormLabel>
                 <Input name="age" defaultValue={auth?.Age || ''} />
               </FormControl> */}
-              {/* <FormControl id="dob" mb={4}>
+              <FormControl id="dob" mb={4}>
                 <FormLabel>Date of Birth</FormLabel>
                 <Input name="dob" type="date" defaultValue={auth?.DOB || ''} />
-              </FormControl> */}
+              </FormControl>
             </form>
           </ModalBody>
           <ModalFooter>
@@ -336,4 +350,4 @@ const Home1 = () => {
   );
 };
 
-export default Home1;
+export default Home2;
