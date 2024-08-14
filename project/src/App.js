@@ -16,6 +16,9 @@ import HomePage from './components/addmeal/MealPlanningApp.js';
 import ResultPage from './components/result/result.js';
 import { Menu } from '@chakra-ui/react';
 import About1 from './components/about/about1.js';
+import RecipePage from './components/recipies/recipies.js';
+import NutritionPage from './components/homenutrition/homenutrition.js';
+
 //import Navbar from './'
 
 
@@ -41,6 +44,8 @@ function App() {
         <Route path="/forgotpass" element={<ForgotPassword />} />
         <Route path="/addmeal" element={<HomePage/>}/>
         <Route path="/result" element={<ResultPage/>}/>
+        <Route path="/recipe" element={< RecipePage/>}/>
+        <Route path="/homonutri" element={< NutritionPage/>}/>
 
 
 </Routes>

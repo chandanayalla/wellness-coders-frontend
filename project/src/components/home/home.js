@@ -54,9 +54,15 @@ const Home = () => {
                 ABOUT
               </Link>
             </Box>
-            <Box as="li">
-              <Link href="/contact" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
-                CONTACT
+            
+            <Box as="li" mx={2}>
+              <Link  href="/about" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
+                MEAL PLANNING
+              </Link>
+            </Box>
+            <Box as="li" mx={2}>
+              <Link  href="/about" fontWeight="bold" color="black" _hover={{ textDecoration: 'underline', color: '#e60f2e' }}>
+                RECIPIES
               </Link>
             </Box>
           </Flex>
@@ -113,8 +119,9 @@ const Home = () => {
         textAlign="center"
         color="white"
         px={4}
-        bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
+        //bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
         minH="calc(100vh - 80px)"
+         backgroundImage="url('/main.jpeg')"
       >
         <Flex
           direction="column"
@@ -151,19 +158,15 @@ const Home = () => {
             Your go-to resource for healthy eating and meal planning.
           </Text>
           <Flex as="ul" listStyleType="none" spacing={4} mb={4} justify="center">
+            
+            <Box as="li">
+              <Link fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+                Contact
+              </Link>
+            </Box>
             <Box as="li" mx={2}>
               <Link fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                 Nutrition
-              </Link>
-            </Box>
-            <Box as="li" mx={2}>
-              <Link  fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
-                Meal Planning
-              </Link>
-            </Box>
-            <Box as="li" mx={2}>
-              <Link  fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
-                Recipes
               </Link>
             </Box>
           </Flex>

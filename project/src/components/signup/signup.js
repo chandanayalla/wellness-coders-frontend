@@ -12,6 +12,7 @@ import {
   Heading,
   Text,
   Link,
+  Select,
 } from '@chakra-ui/react';
 
 export const SignUp = () => {
@@ -20,10 +21,36 @@ export const SignUp = () => {
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [name, setName] = useState("");
+  const [athleteType, setAthleteType] = useState("");
+  const [gender, setGender] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [age, setAge] = useState("");
+
+  const handleHeightChange = (e) => {
+    const value = e.target.value;
+    if (value >= 0) {
+      setHeight(value);
+    }
+  };
+
+  const handleWeightChange = (e) => {
+    const value = e.target.value;
+    if (value >= 0) {
+      setWeight(value);
+    }
+  };
+
+  const handleAgeChange = (e) => {
+    const value = e.target.value;
+    if (value >= 0) {
+      setAge(value);
+    }
+  };
 
   const signup = async () => {
     try {
-      const response = await axios.post(api + "/signup", { email, name, mobile, password });
+      const response = await axios.post(api + "/signup", { email, name, mobile, password, athleteType, gender, height, weight, age });
       if (response.data.message) {
         console.log(response?.data?.values);
         alert(response.data.message);
@@ -50,10 +77,10 @@ export const SignUp = () => {
       <Box
         maxW="lg"
         mx="auto"
-        height="650px"
-        width="600px"
         p={8}
         borderWidth={1}
+        height="1100px"
+        width="500px"
         borderRadius="lg"
         boxShadow="2xl"
         bg="white"
@@ -105,6 +132,75 @@ export const SignUp = () => {
               type="tel"
               placeholder="Enter your mobile number"
               onChange={(e) => setMobile(e.target.value)}
+              focusBorderColor="black"
+              _placeholder={{ color: 'gray.400' }}
+            />
+          </FormControl>
+
+          <FormControl id="athleteType" isRequired>
+            <FormLabel>Type of Athlete</FormLabel>
+            <Select
+              placeholder="Select type of athlete"
+              onChange={(e) => setAthleteType(e.target.value)}
+              focusBorderColor="black"
+            >
+              <option value="Runner">Runner</option>
+              <option value="Long Jump">Long Jump</option>
+              <option value="Weightlifter">Weightlifter</option>
+              <option value="Swimmer">Swimmer</option>
+              <option value="Pole Vault">Pole Vault</option>
+              <option value="Archery">Archery</option>
+              <option value="Wrestlers">Wrestlers</option>
+              <option value="Marathon">Marathon</option>
+              <option value="Javelin Throw">Javelin Throw</option>
+              <option value="Hurdling">Hurdling</option>
+              <option value="Cyclist">Cyclist</option>
+             
+
+            </Select>
+          </FormControl>
+
+          <FormControl id="gender" isRequired>
+            <FormLabel>Gender</FormLabel>
+            <Select
+              placeholder="Select gender"
+              onChange={(e) => setGender(e.target.value)}
+              focusBorderColor="black"
+            >
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </Select>
+          </FormControl>
+
+          <FormControl id="height" isRequired>
+            <FormLabel>Height (in cm)</FormLabel>
+            <Input
+              type="number"
+              placeholder="Enter your height"
+              onChange={handleHeightChange}
+              focusBorderColor="black"
+              _placeholder={{ color: 'gray.400' }}
+            />
+          </FormControl>
+
+          <FormControl id="weight" isRequired>
+            <FormLabel>Weight (in kg)</FormLabel>
+            <Input
+              type="number"
+              placeholder="Enter your weight"
+              onChange={handleWeightChange}
+              focusBorderColor="black"
+              _placeholder={{ color: 'gray.400' }}
+            />
+          </FormControl>
+
+          <FormControl id="age" isRequired>
+            <FormLabel>Age</FormLabel>
+            <Input
+              type="number"
+              placeholder="Enter your age"
+              onChange={handleAgeChange}
               focusBorderColor="black"
               _placeholder={{ color: 'gray.400' }}
             />

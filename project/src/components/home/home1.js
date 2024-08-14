@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
     Box, Flex, Link, Image, Heading, Text, Button, useBreakpointValue, useMediaQuery, Menu, MenuButton, MenuList, MenuItem,
@@ -20,9 +19,9 @@ const Home1 = () => {
 
   const SignOut = () => {
       sessionStorage?.removeItem('auth');
-      // window.location.reload(); 
+      
       navigate('/');
-      // Reload to reflect the sign-out
+      
   };
 
   return (
@@ -94,9 +93,14 @@ const Home1 = () => {
                               <PopoverContent>
                                   <PopoverArrow />
                                   <PopoverCloseButton />
-                                  <PopoverHeader>{auth?.Email || 'No Email'}</PopoverHeader>
-                                  <PopoverHeader>{auth?.Name || 'No Name'}</PopoverHeader>
-                                  <PopoverHeader>{auth?.Mobile || 'No Mobile Number'}</PopoverHeader>
+                                  <PopoverHeader>Email: {auth?.Email || 'No Email'}</PopoverHeader>
+                                  <PopoverHeader>Name: {auth?.Name || 'No Name'}</PopoverHeader>
+                                  <PopoverHeader>Phone: {auth?.Mobile || 'No Mobile Number'}</PopoverHeader>
+                                  <PopoverHeader>Athlete type: {auth?.Athlete || 'No Name'}</PopoverHeader>
+                                  <PopoverHeader>Gender: {auth?.Gender || 'No Gender'}</PopoverHeader>
+                                  <PopoverHeader>Height: {auth?.Height || 'No Height'}</PopoverHeader>
+                                  <PopoverHeader>Weight: {auth?.Weight || 'No Weight'}</PopoverHeader>
+                                  <PopoverHeader>Age: {auth?.Age || 'No Age'}</PopoverHeader> 
                                   <PopoverFooter>
                                       <Button colorScheme="red" onClick={SignOut}>Sign Out</Button>
                                   </PopoverFooter>
@@ -116,8 +120,9 @@ const Home1 = () => {
               textAlign="center"
               color="white"
               px={4}
-              bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
+              //bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
               minH="calc(100vh - 80px)"
+              backgroundImage="url('/hibro.jpeg')"
           >
               <Flex
                   direction="column"
@@ -126,7 +131,7 @@ const Home1 = () => {
                   maxW="800px"
                   mx="auto"
               >
-                  <Heading as="h1" size="2xl" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
+                  <Heading as="h1" fontWeight="bolder" mb={4} textShadow="2px 2px 4px rgba(0, 0, 0, 0.5)">
                       Welcome to Our Website
                   </Heading>
                   <Text fontSize="lg" mb={6} textShadow="1px 1px 3px rgba(0, 0, 0, 0.5)">
@@ -164,17 +169,17 @@ const Home1 = () => {
                   </Text>
                   <Flex as="ul" listStyleType="none" spacing={4} mb={4} justify="center">
                       <Box as="li" mx={2}>
-                          <Link href="/nutrition" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+                          <Link href="/homonutri" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                               Nutrition
                           </Link>
                       </Box>
                       <Box as="li" mx={2}>
-                          <Link href="/meal-planning" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+                          <Link href="/homomeal" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                               Meal Planning
                           </Link>
                       </Box>
                       <Box as="li" mx={2}>
-                          <Link href="/recipes" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+                          <Link href="/recipe" fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
                               Recipes
                           </Link>
                       </Box>

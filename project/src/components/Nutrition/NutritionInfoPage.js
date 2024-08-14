@@ -101,7 +101,7 @@ const NutritionInfoPage = () => {
         </Box>
       </SimpleGrid>
 
-      <Center>
+      {/* <Center>
         <Box
           maxW="lg"
           p={6}
@@ -121,7 +121,7 @@ const NutritionInfoPage = () => {
             Enter
           </Button>
         </Box>
-      </Center>
+      </Center> */}
     </Box>
   );
 };
