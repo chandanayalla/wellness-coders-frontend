@@ -125,7 +125,7 @@ const Home = () => {
         px={4}
         //bgGradient="linear(to-b, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))"
         minH="calc(100vh - 80px)"
-         backgroundImage="url('/main.jpeg')"
+         backgroundImage="url('/public/main.jpeg')"
       >
         <Flex
           direction="column"
