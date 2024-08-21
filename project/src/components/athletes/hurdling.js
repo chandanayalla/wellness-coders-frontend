@@ -3,6 +3,14 @@ import { Box, Heading, Text, Container, Image, VStack } from '@chakra-ui/react';
 
 const HurdlePage = () => {
   return (
+    <Box
+    minH="100vh"
+    bgGradient="linear(to-r, blue.100, purple.100)"
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    p={4}
+  >
     <Container maxW="xl" bg="white" p={8} borderRadius="lg" boxShadow="md">
       <VStack spacing={6} align="start">
         <Heading as="h1" size="xl" color="black">Hurdling Meal Plan</Heading>
@@ -75,6 +83,7 @@ Day 7:
         </Text>
       </VStack>
     </Container>
+    </Box>
   );
 };
 

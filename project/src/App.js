@@ -15,7 +15,7 @@ import HydrationCalculator from './components/calculator/HydrationCalculator';
 import MacronutrientCalculator from './components/calculator/MacronutrientCalculator';
 import NutritionInfoPage from './components/Nutrition/NutritionInfoPage';
 //import HomePage from './components/addmeal/MealPlanningApp.js';
-import ResultPage from './components/result/result.js';
+// import ResultPage from './components/result/result.js';
 import { Menu } from '@chakra-ui/react';
 
 import RecipePage from './components/recipies/recipies.js';
@@ -60,7 +60,7 @@ function App() {
         <Route path="/about" element={<Menu/>}/>
         <Route path="/forgotpass" element={<ForgotPassword />} />
          {/* <Route path="/addmeal" element={<HomePage/>}/> */}
-        <Route path="/result" element={<ResultPage/>}/>
+        {/* <Route path="/result" element={<ResultPage/>}/> */}
         <Route path="/recipe" element={< RecipePage/>}/>
         <Route path="/homonutri" element={< NutritionPage/>}/>
         <Route path="/homomeal" element={< MealPlanning/>}/> 

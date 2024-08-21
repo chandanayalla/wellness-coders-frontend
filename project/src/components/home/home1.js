@@ -155,7 +155,7 @@ const Home1 = () => {
                   <PopoverHeader>Phone: {auth?.Mobile || 'No Mobile Number'}</PopoverHeader>
                   <PopoverHeader>Athlete type: {auth?.Athlete || 'No Name'}</PopoverHeader>
                   <PopoverHeader>Gender: {auth?.Gender || 'No Gender'}</PopoverHeader>
-                  <PopoverHeader>Age: {auth?.age || 'No age'}</PopoverHeader>
+                  <PopoverHeader>Age: {auth?.Age || 'No age'}</PopoverHeader>
                   <PopoverFooter>
                     <Button colorScheme="blue" onClick={openEditModal} mr={3}>Edit</Button>
                     <Button colorScheme="blue" onClick={openChangePassword}>Change Password</Button>

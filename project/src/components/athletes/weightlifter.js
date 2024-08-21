@@ -4,6 +4,14 @@ import { Box, Heading, Text, Container, Image, VStack } from '@chakra-ui/react';
 
 const WeightlifterPage = () => {
   return (
+    <Box
+    minH="100vh"
+    bgGradient="linear(to-r, blue.100, purple.100)"
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    p={4}
+  >
     <Container maxW="xl" bg="white" p={8} borderRadius="lg" boxShadow="md">
       <VStack spacing={6} align="start">
         <Heading as="h1" size="xl" color="black">Weightlifter Meal Plan</Heading>
@@ -78,6 +86,7 @@ Dinner: shrimp stir-fried with peppers, onions, and broccoli over brown rice
         </Text>
       </VStack>
     </Container>
+    </Box>
   );
 };
 

@@ -21,7 +21,7 @@ export const SignUp = () => {
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [name, setName] = useState("");
-  const [athleteType, setAthleteType] = useState("");
+  const [athlete, setAthleteType] = useState("");
   const [gender, setGender] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -57,7 +57,7 @@ export const SignUp = () => {
     }
 
     // Validate that all fields are filled
-    if (!name || !email || !mobile || !password || !athleteType || !gender || !height || !weight || !age) {
+    if (!name || !email || !mobile || !password || !athlete || !gender || !height || !weight || !age) {
       alert("Please fill in all the fields.");
       return false;
     }
@@ -83,7 +83,7 @@ export const SignUp = () => {
     }
 
     try {
-      const response = await axios.post(api + "/signup", { email, name, mobile, password, athleteType, gender, height, weight, age });
+      const response = await axios.post(api + "/signup", { email, name, mobile, password, athlete, gender, height, weight, age });
       if (response.data.message) {
         alert(response.data.message);
         navigate('/signin');
