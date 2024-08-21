@@ -13,7 +13,7 @@ export const MealPlanning = () => {
 
   const handleSelectChange = (event) => {
     const selectedValue = event.target.value;
-    // Redirect based on the selected value
+  
     if (selectedValue) {
       navigate('/${selectedValue}');
     }
@@ -47,7 +47,7 @@ export const MealPlanning = () => {
             Choose your type of sport to learn more about specific meal plans:
           </Text>
 
-          <Select placeholder="Select athlete type" focusBorderColor="teal.500" onChange={handleSelectChange}>
+          <Select placeholder="Select athlete type" focusBorderColor="blue" onChange={handleSelectChange}>
             <option value="longjump">Long Jump</option>
             <option value="polevault">Pole Vault</option>
             <option value="archery">Archery</option>

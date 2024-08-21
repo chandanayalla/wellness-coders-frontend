@@ -48,18 +48,51 @@ export const SignUp = () => {
     }
   };
 
+  const validateForm = () => {
+    // Validate email format
+    const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    // Validate that all fields are filled
+    if (!name || !email || !mobile || !password || !athleteType || !gender || !height || !weight || !age) {
+      alert("Please fill in all the fields.");
+      return false;
+    }
+
+    // Validate password length
+    if (password.length < 6) {
+      alert("Password should be at least 6 characters long.");
+      return false;
+    }
+
+    // Validate mobile number (example: length check, can be more specific)
+    if (mobile.length < 10 || mobile.length > 15) {
+      alert("Please enter a valid mobile number.");
+      return false;
+    }
+
+    return true;
+  };
+
   const signup = async () => {
+    if (!validateForm()) {
+      return;
+    }
+
     try {
       const response = await axios.post(api + "/signup", { email, name, mobile, password, athleteType, gender, height, weight, age });
       if (response.data.message) {
-        console.log(response?.data?.values);
         alert(response.data.message);
         navigate('/signin');
       } else {
-        alert(response.data.error);
+        alert("Signup failed: " + response.data.error);
       }
     } catch (e) {
       console.log(e);
+      alert("Signup failed. Please try again.");
     }
   };
 
@@ -155,8 +188,6 @@ export const SignUp = () => {
               <option value="Javelin Throw">Javelin Throw</option>
               <option value="Hurdling">Hurdling</option>
               <option value="Cyclist">Cyclist</option>
-             
-
             </Select>
           </FormControl>
 
@@ -195,11 +226,11 @@ export const SignUp = () => {
             />
           </FormControl>
 
-          <FormControl id="date of birth" isRequired>
-            <FormLabel>Date of birth</FormLabel>
+          <FormControl id="age" isRequired>
+            <FormLabel>Age</FormLabel>
             <Input
-              type="date"
-              placeholder="Enter your dob"
+              type="number"
+              placeholder="Enter your age"
               onChange={handleAgeChange}
               focusBorderColor="black"
               _placeholder={{ color: 'gray.400' }}

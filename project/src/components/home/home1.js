@@ -36,12 +36,12 @@ const Home1 = () => {
       Email: formData.get('email'),
       Name: formData.get('name'),
       Mobile: formData.get('mobile'),
-     // Athlete: formData.get('athlete'),
+      Athlete: formData.get('athlete'),
       Gender: formData.get('gender'),
-      //Height: formData.get('height'),
-     // Weight: formData.get('weight'),
+      Height: formData.get('height'),
+       Weight: formData.get('weight'),
       Age: formData.get('age'),
-      DOB: formData.get('dob'),
+      //DOB: formData.get('dob'),
       isAdmin: auth?.isAdmin || false, 
     };
     setAuth(updatedAuth);
@@ -155,7 +155,7 @@ const Home1 = () => {
                   <PopoverHeader>Phone: {auth?.Mobile || 'No Mobile Number'}</PopoverHeader>
                   <PopoverHeader>Athlete type: {auth?.Athlete || 'No Name'}</PopoverHeader>
                   <PopoverHeader>Gender: {auth?.Gender || 'No Gender'}</PopoverHeader>
-                  <PopoverHeader>Date of Birth: {auth?.DOB || 'No DOB'}</PopoverHeader>
+                  <PopoverHeader>Age: {auth?.age || 'No age'}</PopoverHeader>
                   <PopoverFooter>
                     <Button colorScheme="blue" onClick={openEditModal} mr={3}>Edit</Button>
                     <Button colorScheme="blue" onClick={openChangePassword}>Change Password</Button>

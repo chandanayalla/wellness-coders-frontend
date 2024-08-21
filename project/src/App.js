@@ -6,6 +6,7 @@ import Home from './components/home/home';
 import Home1 from './components/home/home1';
 import Home2 from './components/home/home2';
 import About from './components/about/about';
+import About1 from './components/about/about1.js';
 import SignOut from './components/signout/signout';
 import { ForgotPassword } from './components/forgotpassword/forgotpassword';
 import Contact from './components/contact/contact';
@@ -13,13 +14,13 @@ import CalorieCalculator from './components/calculator/CalorieCalculator';
 import HydrationCalculator from './components/calculator/HydrationCalculator';
 import MacronutrientCalculator from './components/calculator/MacronutrientCalculator';
 import NutritionInfoPage from './components/Nutrition/NutritionInfoPage';
-import HomePage from './components/addmeal/MealPlanningApp.js';
+//import HomePage from './components/addmeal/MealPlanningApp.js';
 import ResultPage from './components/result/result.js';
 import { Menu } from '@chakra-ui/react';
-import About1 from './components/about/about1.js';
+
 import RecipePage from './components/recipies/recipies.js';
 import NutritionPage from './components/homenutrition/homenutrition.js';
-import MealPlanning from './components/mealplanning/mealplanning.js';
+
 import LongJumpPage from './components/athletes/longjump.js';
 import RunnerPage from './components/athletes/runner.js';
 import SwimmerPage from './components/athletes/swimmer.js';
@@ -34,6 +35,7 @@ import MarathonPage from './components/athletes/marathon.js';
 import PaymentPage from './components/stores/checkout.js';
 
 import ProductPage from './components/stores/productpage.js';
+import MealPlanning from './components/meal/mealplanning.js';
 //import Navbar from './'
 
 
@@ -57,12 +59,12 @@ function App() {
         <Route path="/nutrition" element={<NutritionInfoPage/>}/>
         <Route path="/about" element={<Menu/>}/>
         <Route path="/forgotpass" element={<ForgotPassword />} />
-        <Route path="/addmeal" element={<HomePage/>}/>
+         {/* <Route path="/addmeal" element={<HomePage/>}/> */}
         <Route path="/result" element={<ResultPage/>}/>
         <Route path="/recipe" element={< RecipePage/>}/>
         <Route path="/homonutri" element={< NutritionPage/>}/>
-        <Route path="/homomeal" element={< MealPlanning/>}/>
-       <Route path="/longjump" element={<LongJumpPage/>}/>
+        <Route path="/homomeal" element={< MealPlanning/>}/> 
+        <Route path="/longjump" element={<LongJumpPage/>}/>
         <Route path="/runner" element={<RunnerPage/>}/>
         <Route path="/swimmer" element={<SwimmerPage/>}/>
         <Route path="/wrestler" element={<WrestlerPage/>}/>
